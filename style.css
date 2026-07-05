@@ -228,12 +228,12 @@ HERO
 
 .profile-card{
 
-    width:280px;
+    width:180px;
 
-    height:280px;
+    height:180px;
 
     border-radius:50%;
-    
+
     object-fit: cover;
 
     overflow:hidden;
