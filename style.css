@@ -15,7 +15,16 @@ html{
 body{
     font-family:'Inter',sans-serif;
 
-    background:#050505;
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,0,0,.08),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,30,30,.06),
+    transparent 45%),
+
+    #050505;
 
     color:#f5f5f5;
 
@@ -96,7 +105,7 @@ header{
 
 .logo span{
 
-    color:#ff3131
+    color:#ff3131;
 
 }
 
@@ -218,7 +227,7 @@ HERO
 
 .btn:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px) scale(1.03);
 
     box-shadow:0 0 35px rgba(255,40,40,.5);
 
@@ -268,7 +277,22 @@ HERO
 
     box-shadow:0 0 55px rgba(255,40,40,.45);
 
+    transition:.4s;
+
 }
+
+.profile-card:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 30px rgba(255,0,0,.4),
+
+0 0 80px rgba(255,0,0,.25);
+
+}
+
 
 .profile-card img{
 
@@ -365,6 +389,8 @@ ABOUT
 
     position:relative;
 
+    cursor:default;
+
 }
 
 .highlight::before{
@@ -442,7 +468,17 @@ pointer-events:none;
 .info-box{
 
     
-    background:rgba(18,18,18,.78);
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(22,22,22,.92),
+
+    rgba(12,12,12,.88)
+
+);
 
     backdrop-filter:blur(18px);
 
@@ -579,7 +615,7 @@ SKILLS
 
 .progress{
 
-     animation:load 2s ease;
+     animation:load 1.8s cubic-bezier(.4,0,.2,1);
 
     height:100%;
 
@@ -590,21 +626,48 @@ SKILLS
         #ff5b5b
     );
 
+    position:relative;
+
+    overflow:hidden;
+
     box-shadow:
         0 0 10px rgba(255,50,50,.35),
         0 0 20px rgba(255,40,40,.25);
 
 }
 
-.progress{
+.progress::after{
 
-    height:100%;
+content:"";
 
-    background:#ff3131;
+position:absolute;
 
-    border-radius:20px;
+right:0;
+
+top:0;
+
+width:60px;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.5),
+
+transparent
+
+);
+
+animation:shine 2.8s infinite;
 
 }
+
 
 .verilog{
 
@@ -668,6 +731,8 @@ position:relative;
 
 transition:.35s;
 
+cursor:pointer;
+
 }
 
 .card::before{
@@ -692,13 +757,30 @@ transition:.45s;
 
 }
 
+.card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+180deg,
+transparent,
+rgba(255,0,0,.03)
+);
+
+pointer-events:none;
+
+}
+
+
 .card:hover{
 
 transform:
 
-translateY(-10px)
-
-scale(1.02);
+translateY(-10px) scale(1.02);
 
 border-color:#ff3131;
 
@@ -797,13 +879,19 @@ FOOTER
 
 footer{
 
-    background:#090909;
+    background:
+
+    linear-gradient(
+    180deg,
+    #080808,
+    #050505
+);
 
     padding:80px 0;
 
 }
 
-.footer-line{
+ter-line{
 
     width:100%;
 
@@ -1041,7 +1129,7 @@ border-radius:50%;
 
 filter:blur(150px);
 
-opacity:.22;
+opacity:.65;
 
 animation:move 25s infinite alternate ease-in-out;
 
@@ -1101,8 +1189,11 @@ transform:translate(250px,-120px) scale(1.3);
 
 from{
 
-width:0;
+    width:0;
 
+}
+
+to{   
 }
 
 }
@@ -1127,6 +1218,22 @@ transform:translateY(0);
 
 }
 
+@keyframes shine{
+
+0%{
+
+transform:translateX(-70px);
+
+}
+
+100%{
+
+transform:translateX(70px);
+
+}
+
+}
+
 .particles{
 
 position:fixed;
@@ -1145,15 +1252,21 @@ overflow:hidden;
 
 position:absolute;
 
-width:4px;
+width:3px;
 
-height:4px;
+height:3px;
 
 background:#ff5555;
 
 border-radius:50%;
 
-box-shadow:0 0 12px #ff4444;
+box-shadow:
+
+0 0 8px #ff4444,
+
+0 0 18px #ff0000,
+
+0 0 30px rgba(255,0,0,.4);
 
 animation:float 20s linear infinite;
 
