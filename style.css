@@ -632,9 +632,9 @@ SKILLS
         #ff5b5b
     );
 
-    box-shadow:
-        0 0 10px rgba(255,50,50,.35),
-        0 0 20px rgba(255,40,40,.25);
+       box-shadow:
+        inset 0 0 8px rgba(0,0,0,.6),
+        0 0 10px rgba(255,40,40,.25);
 
 }
 
@@ -644,24 +644,30 @@ SKILLS
 
     position:absolute;
 
-    top:0;
-    left:-120px;
+    top:-3px;
+    left:-150px;
 
-    width:120px;
-    height:100%;
+    width:140px;
+    height:18px;
 
     background:linear-gradient(
         90deg,
-        transparent 0%,
-        rgba(255,255,255,.95) 50%,
-        transparent 100%
+        transparent,
+        #ff2d2d,
+        #ff6666,
+        #ff2d2d,
+        transparent
     );
 
-    filter:blur(2px);
+    border-radius:20px;
+
+    filter:blur(6px);
+
+    opacity:.95;
 
     transform:skewX(-25deg);
 
-    animation:shine 3s linear infinite;
+    animation:shine 2.6s linear infinite;
 }
 
 
