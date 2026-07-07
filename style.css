@@ -236,6 +236,8 @@ HERO
 
     object-fit: cover;
 
+    object-position:center top;
+
     overflow:hidden;
 
     margin:auto;
