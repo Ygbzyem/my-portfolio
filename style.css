@@ -1259,41 +1259,86 @@ overflow:hidden;
         0 0 8px #ff4d4d,
         0 0 18px #ff0000,
         0 0 28px rgba(255,0,0,.6);
+    
+    opacity:.85;
 
     animation:float linear infinite;
 
 }
 
+.particles span:nth-child(odd){
+    animation-duration:12s;
+}
+
+.particles span:nth-child(even){
+    animation-duration:18s;
+}
+
+.particles span:nth-child(3n){
+    animation-duration:24s;
+}
+
+.particles span:nth-child(1){left:2%;}
+.particles span:nth-child(2){left:5%;}
+.particles span:nth-child(3){left:9%;}
+.particles span:nth-child(4){left:13%;}
+.particles span:nth-child(5){left:17%;}
+.particles span:nth-child(6){left:22%;}
+.particles span:nth-child(7){left:26%;}
+.particles span:nth-child(8){left:31%;}
+.particles span:nth-child(9){left:35%;}
+.particles span:nth-child(10){left:39%;}
+.particles span:nth-child(11){left:43%;}
+.particles span:nth-child(12){left:47%;}
+.particles span:nth-child(13){left:51%;}
+.particles span:nth-child(14){left:55%;}
+.particles span:nth-child(15){left:59%;}
+.particles span:nth-child(16){left:63%;}
+.particles span:nth-child(17){left:67%;}
+.particles span:nth-child(18){left:71%;}
+.particles span:nth-child(19){left:75%;}
+.particles span:nth-child(20){left:79%;}
+.particles span:nth-child(21){left:83%;}
+.particles span:nth-child(22){left:87%;}
+.particles span:nth-child(23){left:90%;}
+.particles span:nth-child(24){left:93%;}
+.particles span:nth-child(25){left:95%;}
+.particles span:nth-child(26){left:97%;}
+.particles span:nth-child(27){left:12%;}
+.particles span:nth-child(28){left:33%;}
+.particles span:nth-child(29){left:61%;}
+.particles span:nth-child(30){left:81%;}
+
 @keyframes float{
 
 0%{
+    transform:
+        translateY(110vh)
+        translateX(0)
+        scale(.2);
 
-transform:translateY(110vh) scale(.5);
-
-opacity:0;
-
+    opacity:0;
 }
 
-20%{
-
-opacity:1;
-
+10%{
+    opacity:.9;
 }
 
-80%{
-
-opacity:1;
-
+50%{
+    transform:
+        translateY(40vh)
+        translateX(30px)
+        scale(.8);
 }
 
 100%{
+    transform:
+        translateY(-20vh)
+        translateX(-20px)
+        scale(1.2);
 
-transform:translateY(-20vh) scale(1.3);
-
-opacity:0;
-
+    opacity:0;
 }
-
 }
 
 
