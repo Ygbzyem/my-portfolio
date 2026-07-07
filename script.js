@@ -35,3 +35,35 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
+
+const particles = document.querySelectorAll(".particles span");
+
+particles.forEach((particle)=>{
+
+    particle.style.left=Math.random()*100+"%";
+
+    particle.style.animationDuration=
+        (10+Math.random()*15)+"s";
+
+    particle.style.animationDelay=
+        (-Math.random()*20)+"s";
+
+    particle.style.opacity=
+        0.3+Math.random()*0.7;
+
+    const size=2+Math.random()*4;
+
+    particle.style.width=size+"px";
+    particle.style.height=size+"px";
+
+});
+
+const colors=[
+"#ff2d2d",
+"#ff5555",
+"#ff8080",
+"#ff1f1f"
+];
+
+particle.style.background=
+colors[Math.floor(Math.random()*colors.length)];
