@@ -167,7 +167,6 @@ HERO
 
 .hero-left h4{
 
-    color:var(--red2);
 
     font-size:22px;
 
@@ -183,7 +182,7 @@ HERO
 
 .hero-left h2{
 
-    color:var(--red2);
+    color:#050505;
 
     margin-bottom:20px;
 
@@ -191,7 +190,6 @@ HERO
 
 .hero-left p{
 
-    color:#cbd5e1;
 
     max-width:520px;
 
