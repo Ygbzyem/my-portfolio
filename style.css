@@ -522,4 +522,16 @@ display:none;
 
 }
 
+.time-box{
+    margin-top:25px;
+    color:#cbd5e1;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.time-box p{
+    display:flex;
+    gap:10px;
+}
+
 }
