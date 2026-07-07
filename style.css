@@ -22,6 +22,10 @@ body{
 
     line-height:1.6;
 
+    overflow-x:hidden;
+
+    position:relative;
+
 }
 
 .container{
@@ -664,6 +668,71 @@ display:none;
 .social-icons{
 
     gap:20px;
+
+}
+
+/* ==========================
+BACKGROUND
+========================== */
+
+.aurora{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.aurora span{
+    position:absolute;
+    width:900px;
+    height:900px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.18;
+    animation:move 18s linear infinite;
+}
+
+.aurora span:nth-child(1){
+    background:#3b82f6;
+    left:-300px;
+    top:-250px;
+}
+
+.aurora span:nth-child(2){
+    background:#22d3ee;
+    right:-300px;
+    bottom:-250px;
+    animation-duration:25s;
+}
+
+.aurora span:nth-child(3){
+    background:#2563eb;
+    left:30%;
+    top:40%;
+    animation-duration:30s;
+}
+
+@keyframes move{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+25%{
+transform:translate(200px,-120px) scale(1.15);
+}
+
+50%{
+transform:translate(-150px,180px) scale(.9);
+}
+
+75%{
+transform:translate(250px,120px) scale(1.2);
+}
+
+100%{
+transform:translate(0,0) scale(1);
+}
 
 }
 
