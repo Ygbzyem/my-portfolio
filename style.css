@@ -522,16 +522,24 @@ display:none;
 
 }
 
-.time-box{
-    margin-top:25px;
-    color:#cbd5e1;
-    font-size:15px;
+.footer-time{
+
+    margin-top:20px;
+
+    font-size:14px;
+
+    color:#94a3b8;
+
     line-height:1.8;
+
+    font-family:monospace;
+
 }
 
-.time-box p{
-    display:flex;
-    gap:10px;
+.footer-time p{
+
+    margin:4px 0;
+
 }
 
 }
