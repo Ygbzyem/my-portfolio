@@ -13,19 +13,17 @@ html{
 }
 
 body{
-
     font-family:'Inter',sans-serif;
 
-    background:#0f172a;
+    background:#050505;
 
-    color:white;
+    color:#f5f5f5;
 
     line-height:1.6;
 
     overflow-x:hidden;
 
     position:relative;
-
 }
 
 .container{
@@ -36,6 +34,18 @@ body{
 
     margin:auto;
 
+}
+
+:root{
+    --bg:#050505;
+    --card:#111111;
+    --card2:#181818;
+
+    --red:#ff2d2d;
+    --red2:#ff5555;
+
+    --text:#f5f5f5;
+    --gray:#b9b9b9;
 }
 
 /* ==========================
@@ -52,7 +62,11 @@ header{
 
     width:100%;
 
-    background:#111827;
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,45,45,.25);
 
     z-index:999;
 
@@ -82,7 +96,7 @@ header{
 
 .logo span{
 
-    color:#3b82f6;
+    color:#ff3131
 
 }
 
@@ -112,7 +126,7 @@ nav a{
 
 nav a:hover{
 
-    color:#3b82f6;
+    color:var(--red);
 
 }
 
@@ -144,7 +158,7 @@ HERO
 
 .hero-left h4{
 
-    color:#60a5fa;
+    color:var(--red2);
 
     font-size:22px;
 
@@ -160,7 +174,7 @@ HERO
 
 .hero-left h2{
 
-    color:#3b82f6;
+    color:var(--red2);
 
     margin-bottom:20px;
 
@@ -184,7 +198,9 @@ HERO
 
     display:inline-block;
 
-    background:#2563eb;
+    background:linear-gradient(90deg,#ff1f1f,#b30000);
+
+    box-shadow:0 0 25px rgba(255,40,40,.25);
 
     color:white;
 
@@ -202,7 +218,9 @@ HERO
 
 .btn:hover{
 
-    background:#1d4ed8;
+    transform:translateY(-3px);
+
+    box-shadow:0 0 35px rgba(255,40,40,.5);
 
 }
 
@@ -210,7 +228,7 @@ HERO
 
     display:inline-block;
 
-    border:2px solid #3b82f6;
+    border:2px solid var(--red);
 
     color:white;
 
@@ -226,7 +244,7 @@ HERO
 
 .btn-outline:hover{
 
-    background:#2563eb;
+    background:var(--red);
 
 }
 
@@ -246,9 +264,9 @@ HERO
 
     margin:auto;
 
-    border:6px solid #3b82f6;
+    border:6px solid #ff3131;
 
-    box-shadow:0 0 50px rgba(59,130,246,.35);
+    box-shadow:0 0 55px rgba(255,40,40,.45);
 
 }
 
@@ -280,7 +298,7 @@ section{
 
     margin-bottom:60px;
 
-    color:#60a5fa;
+    color:#ff5555;
 
 }
 
@@ -330,9 +348,11 @@ ABOUT
 
 .highlight{
 
-    background:#172033;
+    background:#111111;
 
     border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
 
     border-radius:15px;
 
@@ -344,15 +364,17 @@ ABOUT
 
 .highlight:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-8px);
 
-    border-color:#3b82f6;
+    border-color:var(--red);
+
+    box-shadow:0 0 30px rgba(255,40,40,.25);
 
 }
 
 .highlight h4{
 
-    color:#60a5fa;
+    color:#ff5555;
 
     margin-bottom:10px;
 
@@ -376,7 +398,9 @@ ABOUT
 
 .info-box{
 
-    background:#1e293b;
+    background:#111111;
+
+    border:1px solid rgba(255,255,255,.05);
 
     padding:30px;
 
@@ -424,7 +448,7 @@ SKILLS
 
     height:12px;
 
-    background:#334155;
+    background:linear-gradient(90deg,#ff2222,#ff5555);
 
     border-radius:20px;
 
@@ -436,7 +460,7 @@ SKILLS
 
     height:100%;
 
-    background:#3b82f6;
+    background:#ff3131;
 
     border-radius:20px;
 
@@ -488,7 +512,9 @@ PROJECT
 
 .card{
 
-    background:#1e293b;
+    background:#111111;
+
+    border:1px solid rgba(255,255,255,.05);
 
     padding:35px;
 
@@ -502,7 +528,10 @@ PROJECT
 
     transform:translateY(-10px);
 
-    box-shadow:0 15px 35px rgba(59,130,246,.25);
+    border-color:#ff3131;
+
+    box-shadow:0 0 30px rgba(255,50,50,.3);
+
 
 }
 
@@ -522,7 +551,7 @@ PROJECT
 
 .card a{
 
-    color:#60a5fa;
+    color:#ff5555;
 
     text-decoration:none;
 
@@ -534,7 +563,7 @@ FOOTER
 
 footer{
 
-    background:#111827;
+    background:#090909;
 
     padding:80px 0;
 
@@ -592,7 +621,7 @@ footer h2{
 
 .contact-info i{
 
-    color:#60a5fa;
+    color:#ff5555;
 
     width:25px;
 
@@ -650,7 +679,7 @@ footer h2{
 
 .social-icons a:hover{
 
-    color:#3b82f6;
+    color:#ff3131;
 
     transform:translateY(-5px);
 
@@ -753,62 +782,159 @@ BACKGROUND
 ========================== */
 
 .aurora{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    z-index:-1;
+
+position:fixed;
+
+inset:0;
+
+z-index:-2;
+
+overflow:hidden;
+
+pointer-events:none;
+
 }
 
 .aurora span{
-    position:absolute;
-    width:900px;
-    height:900px;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.18;
-    animation:move 18s linear infinite;
+
+position:absolute;
+
+width:900px;
+
+height:900px;
+
+border-radius:50%;
+
+filter:blur(150px);
+
+opacity:.22;
+
+animation:move 25s infinite alternate ease-in-out;
+
 }
 
 .aurora span:nth-child(1){
-    background:#3b82f6;
-    left:-300px;
-    top:-250px;
+
+background:#ff2020;
+
+left:-250px;
+
+top:-200px;
+
 }
 
 .aurora span:nth-child(2){
-    background:#22d3ee;
-    right:-300px;
-    bottom:-250px;
-    animation-duration:25s;
+
+background:#7a0000;
+
+right:-250px;
+
+bottom:-200px;
+
+animation-duration:30s;
+
 }
 
 .aurora span:nth-child(3){
-    background:#2563eb;
-    left:30%;
-    top:40%;
-    animation-duration:30s;
+
+background:#ff4d4d;
+
+left:30%;
+
+top:35%;
+
+animation-duration:40s;
+
 }
 
 @keyframes move{
 
 0%{
+
 transform:translate(0,0) scale(1);
-}
 
-25%{
-transform:translate(200px,-120px) scale(1.15);
-}
-
-50%{
-transform:translate(-150px,180px) scale(.9);
-}
-
-75%{
-transform:translate(250px,120px) scale(1.2);
 }
 
 100%{
-transform:translate(0,0) scale(1);
+
+transform:translate(250px,-120px) scale(1.3);
+
 }
 
 }
+.particles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-1;
+
+overflow:hidden;
+
+}
+
+.particles span{
+
+position:absolute;
+
+width:4px;
+
+height:4px;
+
+background:#ff5555;
+
+border-radius:50%;
+
+box-shadow:0 0 12px #ff4444;
+
+animation:float 20s linear infinite;
+
+}
+
+.particles span:nth-child(1){left:8%;animation-delay:0s;}
+.particles span:nth-child(2){left:18%;animation-delay:2s;}
+.particles span:nth-child(3){left:28%;animation-delay:4s;}
+.particles span:nth-child(4){left:38%;animation-delay:6s;}
+.particles span:nth-child(5){left:48%;animation-delay:8s;}
+.particles span:nth-child(6){left:58%;animation-delay:10s;}
+.particles span:nth-child(7){left:68%;animation-delay:12s;}
+.particles span:nth-child(8){left:78%;animation-delay:14s;}
+.particles span:nth-child(9){left:88%;animation-delay:16s;}
+.particles span:nth-child(10){left:95%;animation-delay:18s;}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(110vh) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-20vh) scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+
