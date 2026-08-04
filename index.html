@@ -8,18 +8,38 @@
 
     <title>Tung Pham | IC Designer Portfolio</title>
 
+    <meta name="description" content="Pham Minh Tung — Semiconductor IC Design student at FPT University. RTL design, FPGA, ASIC and computer architecture projects.">
+    <meta name="author" content="Pham Minh Tung">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tung Pham | IC Designer Portfolio">
+    <meta property="og:description" content="Semiconductor IC Design student — RTL design, FPGA, ASIC and computer architecture projects.">
+    <meta property="og:image" content="assets/img/avatar.jpg">
+    <!-- Add og:url once the site is deployed to a real domain -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tung Pham | IC Designer Portfolio">
+    <meta name="twitter:description" content="Semiconductor IC Design student — RTL design, FPGA, ASIC and computer architecture projects.">
+    <meta name="twitter:image" content="assets/img/avatar.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='9' width='14' height='14' rx='2' fill='%230d1420' stroke='%2322d3ee' stroke-width='2'/%3E%3Cg stroke='%2322d3ee' stroke-width='2'%3E%3Cline x1='9' y1='13' x2='4' y2='13'/%3E%3Cline x1='9' y1='19' x2='4' y2='19'/%3E%3Cline x1='23' y1='13' x2='28' y2='13'/%3E%3Cline x1='23' y1='19' x2='28' y2='19'/%3E%3Cline x1='13' y1='9' x2='13' y2='4'/%3E%3Cline x1='19' y1='9' x2='19' y2='4'/%3E%3Cline x1='13' y1='23' x2='13' y2='28'/%3E%3Cline x1='19' y1='23' x2='19' y2='28'/%3E%3C/g%3E%3C/svg%3E">
+
+    <meta name="theme-color" content="#070b12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f4f7fa" media="(prefers-color-scheme: light)">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Icons -->
-      
+
 
 </head>
 
@@ -33,9 +53,15 @@
 
         <h2 class="logo">Tung Pham<span></span></h2>
 
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav>
 
-            <ul>
+            <ul id="navList">
 
                 <li><a href="#home">Home</a></li>
 
@@ -79,11 +105,11 @@ FPGA, ASIC Design and Computer Architecture.
 
 <div class="buttons">
 
-<a href="assets/pdf/Resume.pdf" 
+<a href="assets/pdf/Resume.pdf"
   download
   class="btn">Download Resume</a>
 
-<a href="https://github.com/Ygbzyem"   
+<a href="https://github.com/Ygbzyem"
   target="_blank"
   class="btn-outline">GitHub</a>
 
@@ -111,17 +137,19 @@ FPGA, ASIC Design and Computer Architecture.
 
 <div class="container">
 
-<h2 class="section-title">About Me</h2>
+<span class="eyebrow reveal">Get to know me</span>
+
+<h2 class="section-title reveal">About Me</h2>
 
 <div class="about-grid">
 
-<div class="about-content">
+<div class="about-content reveal">
 
 <p class="about-text">
 
 As a sophomore majoring in Semiconductor IC Design at FPT University,
-I am passionate about Digital Hardware Design, FPGA Development,
-and ASIC Design Flow. I enjoy building practical hardware systems,
+I am passionate about <span class="accent-text">Digital Hardware Design, FPGA Development,
+and ASIC Design Flow</span>. I enjoy building practical hardware systems,
 learning modern RTL methodologies, and continuously expanding my
 knowledge across embedded systems and computer architecture.
 
@@ -129,26 +157,35 @@ knowledge across embedded systems and computer architecture.
 
 <div class="about-highlights">
 
-<div class="highlight">
+<div class="highlight reveal">
 
+<div class="card-head">
+<i class="fas fa-graduation-cap"></i>
 <h4>Education</h4>
+</div>
 
 <p>FPT University<br>
 Semiconductor IC Design</p>
 
 </div>
 
-<div class="highlight">
+<div class="highlight reveal">
 
+<div class="card-head">
+<i class="fas fa-bullseye"></i>
 <h4>Current Focus</h4>
+</div>
 
 <p>RTL Design • FPGA • Computer Architecture</p>
 
 </div>
 
-<div class="highlight">
+<div class="highlight reveal">
 
+<div class="card-head">
+<i class="fas fa-book-open"></i>
 <h4>Learning</h4>
+</div>
 
 <p>SystemVerilog, Python, HTML/CSS, Java</p>
 
@@ -158,25 +195,28 @@ Semiconductor IC Design</p>
 
 </div>
 
-<div>
+<div class="reveal">
 
 <div class="info-box">
 
+<div class="card-head">
+<i class="fas fa-star"></i>
 <h3>Interested In</h3>
+</div>
 
 <ul>
 
-<li>RTL Design</li>
+<li><i class="fas fa-diagram-project"></i> RTL Design</li>
 
-<li>SystemVerilog</li>
+<li><i class="fas fa-microchip"></i> SystemVerilog</li>
 
-<li>FPGA</li>
+<li><i class="fas fa-server"></i> FPGA</li>
 
-<li>ASIC</li>
+<li><i class="fas fa-layer-group"></i> ASIC</li>
 
-<li>Computer Architecture</li>
+<li><i class="fas fa-sitemap"></i> Computer Architecture</li>
 
-<li>Internet of Things (IOT)</li>
+<li><i class="fas fa-wifi"></i> Internet of Things (IOT)</li>
 
 </ul>
 
@@ -196,67 +236,59 @@ Semiconductor IC Design</p>
 
 <div class="container">
 
-<h2 class="section-title">
+<span class="eyebrow reveal">What I work with</span>
+
+<h2 class="section-title reveal">
 
 Technical Skills
 
 </h2>
 
-<div class="skill">
+<div class="skills-groups">
 
-<p>Verilog</p>
+<div class="skill-group reveal">
 
-<div class="bar">
+<div class="card-head">
+<i class="fas fa-microchip"></i>
+<h4>Hardware &amp; Digital Design</h4>
+</div>
 
-<div class="progress verilog"></div>
-
+<div class="skill-tags">
+<span>Verilog</span>
+<span>SystemVerilog</span>
+<span>FPGA</span>
+<span>ASIC Flow</span>
 </div>
 
 </div>
 
-<div class="skill">
+<div class="skill-group reveal">
 
-<p>SystemVerilog</p>
+<div class="card-head">
+<i class="fas fa-code"></i>
+<h4>Programming</h4>
+</div>
 
-<div class="bar">
-
-<div class="progress sv"></div>
-
+<div class="skill-tags">
+<span>C / C++</span>
+<span>Python</span>
+<span>Java</span>
 </div>
 
 </div>
 
-<div class="skill">
+<div class="skill-group reveal">
 
-<p>C/C++</p>
-
-<div class="bar">
-
-<div class="progress cpp"></div>
-
+<div class="card-head">
+<i class="fas fa-toolbox"></i>
+<h4>Tools &amp; Workflow</h4>
 </div>
 
+<div class="skill-tags">
+<span>Git</span>
+<span>Linux</span>
+<span>HTML / CSS</span>
 </div>
-
-<div class="skill">
-
-<p>Python</p>
-
-<div class="bar">
-
-<div class="progress python"></div>
-
-</div>
-
-</div>
-
-<div class="skill">
-
-<p>Git</p>
-
-<div class="bar">
-
-<div class="progress git"></div>
 
 </div>
 
@@ -272,7 +304,9 @@ Technical Skills
 
 <div class="container">
 
-<h2 class="section-title">
+<span class="eyebrow reveal">Selected work</span>
+
+<h2 class="section-title reveal">
 
 Featured Projects
 
@@ -280,25 +314,37 @@ Featured Projects
 
 <div class="project-grid">
 
-<div class="card">
+<div class="card reveal">
 
-<h3>3x3 Image Processing
-</h3>
+<div class="card-head">
+<i class="fas fa-microchip"></i>
+<h3>3x3 Image Processing</h3>
+</div>
 
 <p>
 
 Real-time 2D Image Convolution Processor implemented on FPGA using Verilog HDL.
 
 </p>
+
+<div class="project-tags">
+<span>Verilog</span>
+<span>FPGA</span>
+<span>Image Processing</span>
+</div>
+
 <a href="https://github.com/Ygbzyem/FPGA_RealTime_Conv3x3_Processor" target="_blank">
    View Project →
 </a>
 
 </div>
 
-<div class="card">
+<div class="card reveal">
 
-<h3>AI Speech to Text (Processing Project) </h3>
+<div class="card-head">
+<i class="fas fa-microphone"></i>
+<h3>AI Speech to Text</h3>
+</div>
 
 <p>
 
@@ -306,19 +352,33 @@ Using ESP32 combine with Edge Impulse to train Ai
 
 </p>
 
+<div class="project-tags">
+<span>ESP32</span>
+<span>Edge Impulse</span>
+<span>AI</span>
+</div>
+
 <a href="#">View Project →</a>
 
 </div>
 
-<div class="card">
+<div class="card reveal">
 
-<h3>Automated pill dispenser with alert notifications (Future Project)</h3>
+<div class="card-head">
+<i class="fas fa-pills"></i>
+<h3>Automated Pill Dispenser</h3>
+</div>
 
 <p>
 
 An IoT-based automatic medicine dispenser with real-time alert notifications.
 
 </p>
+
+<div class="project-tags">
+<span>IoT</span>
+<span>Future Project</span>
+</div>
 
 <a href="#">View Project →</a>
 
@@ -337,9 +397,11 @@ An IoT-based automatic medicine dispenser with real-time alert notifications.
 
     <div class="footer-line"></div>
 
-    <h2>Contact</h2>
+    <span class="eyebrow reveal">Let's connect</span>
 
-    <div class="contact-grid">
+    <h2 class="reveal">Contact</h2>
+
+    <div class="contact-grid reveal">
 
         <!-- Left -->
         <div class="contact-info">
