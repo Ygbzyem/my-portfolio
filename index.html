@@ -8,38 +8,34 @@
 
     <title>Tung Pham | IC Designer Portfolio</title>
 
-    <meta name="description" content="Pham Minh Tung — Semiconductor IC Design student at FPT University. RTL design, FPGA, ASIC and computer architecture projects.">
+    <meta name="description" content="Pham Minh Tung, Semiconductor IC Design student at FPT University. Verilog RTL projects verified against Python golden models, with Vivado implementation results.">
     <meta name="author" content="Pham Minh Tung">
 
-    <!-- Open Graph / social preview -->
+    <!-- Open Graph / social preview (absolute URLs so previews work) -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ygbzyem.github.io/my-portfolio/">
     <meta property="og:title" content="Tung Pham | IC Designer Portfolio">
-    <meta property="og:description" content="Semiconductor IC Design student — RTL design, FPGA, ASIC and computer architecture projects.">
-    <meta property="og:image" content="assets/img/avatar.jpg">
-    <!-- Add og:url once the site is deployed to a real domain -->
+    <meta property="og:description" content="Verilog RTL projects verified against Python golden models, with Vivado implementation results.">
+    <meta property="og:image" content="https://ygbzyem.github.io/my-portfolio/assets/img/avatar.jpg">
 
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Tung Pham | IC Designer Portfolio">
-    <meta name="twitter:description" content="Semiconductor IC Design student — RTL design, FPGA, ASIC and computer architecture projects.">
-    <meta name="twitter:image" content="assets/img/avatar.jpg">
+    <meta name="twitter:description" content="Verilog RTL projects verified against Python golden models, with Vivado implementation results.">
+    <meta name="twitter:image" content="https://ygbzyem.github.io/my-portfolio/assets/img/avatar.jpg">
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='9' width='14' height='14' rx='2' fill='%230d1420' stroke='%2322d3ee' stroke-width='2'/%3E%3Cg stroke='%2322d3ee' stroke-width='2'%3E%3Cline x1='9' y1='13' x2='4' y2='13'/%3E%3Cline x1='9' y1='19' x2='4' y2='19'/%3E%3Cline x1='23' y1='13' x2='28' y2='13'/%3E%3Cline x1='23' y1='19' x2='28' y2='19'/%3E%3Cline x1='13' y1='9' x2='13' y2='4'/%3E%3Cline x1='19' y1='9' x2='19' y2='4'/%3E%3Cline x1='13' y1='23' x2='13' y2='28'/%3E%3Cline x1='19' y1='23' x2='19' y2='28'/%3E%3C/g%3E%3C/svg%3E">
 
-    <meta name="theme-color" content="#070b12" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#f4f7fa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#070b12">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- Icons -->
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -51,7 +47,7 @@
 
     <div class="container nav">
 
-        <h2 class="logo">Tung Pham<span></span></h2>
+        <a class="logo" href="#home">Tung Pham<span>.</span></a>
 
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
@@ -60,26 +56,20 @@
         </button>
 
         <nav>
-
             <ul id="navList">
-
                 <li><a href="#home">Home</a></li>
-
                 <li><a href="#about">About</a></li>
-
                 <li><a href="#skills">Skills</a></li>
-
                 <li><a href="#projects">Projects</a></li>
-
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
-
         </nav>
 
     </div>
 
 </header>
+
+<main id="main">
 
 <!-- ================= HERO ================= -->
 
@@ -91,27 +81,21 @@
 
 <h4>Hello, I'm</h4>
 
-<h2>Pham Minh Tung</h2>
+<h1>Pham Minh Tung</h1>
 
-<h1>Semiconductor IC Design (Aspiring)</h1>
+<p class="hero-role">Digital IC Design · RTL &amp; Verification</p>
 
 <p>
-
-Semiconductor IC Design student passionate about
-Digital Hardware Design, RTL Development,
-FPGA, ASIC Design and Computer Architecture.
-
+Semiconductor IC Design student at FPT University. I write synthesizable Verilog,
+verify it against bit-exact Python golden models, and report real numbers from
+Vivado: resources, timing and Fmax.
 </p>
 
 <div class="buttons">
 
-<a href="assets/pdf/Resume.pdf"
-  download
-  class="btn">Download Resume</a>
+<a href="assets/pdf/Resume.pdf" download class="btn"><i class="fas fa-download"></i> Download Resume</a>
 
-<a href="https://github.com/Ygbzyem"
-  target="_blank"
-  class="btn-outline">GitHub</a>
+<a href="https://github.com/Ygbzyem" target="_blank" rel="noopener" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
 
 </div>
 
@@ -120,9 +104,7 @@ FPGA, ASIC Design and Computer Architecture.
 <div class="hero-right">
 
 <div class="profile-card">
-
-<img src="assets/img/avatar.jpg" alt="Profile">
-
+<img src="assets/img/avatar.jpg" alt="Portrait of Pham Minh Tung">
 </div>
 
 </div>
@@ -146,49 +128,38 @@ FPGA, ASIC Design and Computer Architecture.
 <div class="about-content reveal">
 
 <p class="about-text">
-
-As a sophomore majoring in Semiconductor IC Design at FPT University,
-I am passionate about <span class="accent-text">Digital Hardware Design, FPGA Development,
-and ASIC Design Flow</span>. I enjoy building practical hardware systems,
-learning modern RTL methodologies, and continuously expanding my
-knowledge across embedded systems and computer architecture.
-
+I'm a sophomore in Semiconductor IC Design at FPT University, focused on
+<span class="accent-text">RTL design and verification</span>. I keep each project
+small enough to finish properly: a spec with port tables first, a Python golden model,
+a self-checking testbench, then synthesis and timing results I can explain.
+Lately I've been comparing architectures that compute the same thing, such as an adder
+tree against a systolic array, to see where area and timing actually go.
 </p>
 
 <div class="about-highlights">
 
 <div class="highlight reveal">
-
 <div class="card-head">
 <i class="fas fa-graduation-cap"></i>
 <h4>Education</h4>
 </div>
-
-<p>FPT University<br>
-Semiconductor IC Design</p>
-
+<p>FPT University<br>Semiconductor IC Design, Year 2</p>
 </div>
 
 <div class="highlight reveal">
-
 <div class="card-head">
 <i class="fas fa-bullseye"></i>
 <h4>Current Focus</h4>
 </div>
-
-<p>RTL Design • FPGA • Computer Architecture</p>
-
+<p>RTL Design • Verification • FPGA</p>
 </div>
 
 <div class="highlight reveal">
-
 <div class="card-head">
 <i class="fas fa-book-open"></i>
 <h4>Learning</h4>
 </div>
-
-<p>SystemVerilog, Python, HTML/CSS, Java</p>
-
+<p>SystemVerilog • Computer Architecture • ASIC Flow</p>
 </div>
 
 </div>
@@ -205,19 +176,12 @@ Semiconductor IC Design</p>
 </div>
 
 <ul>
-
 <li><i class="fas fa-diagram-project"></i> RTL Design</li>
-
-<li><i class="fas fa-microchip"></i> SystemVerilog</li>
-
-<li><i class="fas fa-server"></i> FPGA</li>
-
-<li><i class="fas fa-layer-group"></i> ASIC</li>
-
+<li><i class="fas fa-circle-check"></i> Design Verification</li>
+<li><i class="fas fa-server"></i> FPGA Prototyping</li>
+<li><i class="fas fa-layer-group"></i> ASIC Design Flow</li>
 <li><i class="fas fa-sitemap"></i> Computer Architecture</li>
-
-<li><i class="fas fa-wifi"></i> Internet of Things (IOT)</li>
-
+<li><i class="fas fa-wifi"></i> Embedded Systems &amp; IoT</li>
 </ul>
 
 </div>
@@ -238,58 +202,53 @@ Semiconductor IC Design</p>
 
 <span class="eyebrow reveal">What I work with</span>
 
-<h2 class="section-title reveal">
-
-Technical Skills
-
-</h2>
+<h2 class="section-title reveal">Technical Skills</h2>
 
 <div class="skills-groups">
 
 <div class="skill-group reveal">
-
 <div class="card-head">
 <i class="fas fa-microchip"></i>
-<h4>Hardware &amp; Digital Design</h4>
+<h4>Design &amp; HDL</h4>
 </div>
-
 <div class="skill-tags">
-<span>Verilog</span>
-<span>SystemVerilog</span>
+<span>Verilog-2001</span>
+<span>SystemVerilog (basic)</span>
+<span>Pipelining</span>
+<span>Fixed-point DSP</span>
 <span>FPGA</span>
-<span>ASIC Flow</span>
 </div>
-
 </div>
 
 <div class="skill-group reveal">
-
 <div class="card-head">
-<i class="fas fa-code"></i>
-<h4>Programming</h4>
+<i class="fas fa-vial-circle-check"></i>
+<h4>Verification &amp; EDA</h4>
+</div>
+<div class="skill-tags">
+<span>Self-checking TB</span>
+<span>Python golden model</span>
+<span>Vivado</span>
+<span>ModelSim</span>
+<span>Icarus Verilog</span>
+<span>LTspice</span>
+</div>
 </div>
 
+<div class="skill-group reveal">
+<div class="card-head">
+<i class="fas fa-code"></i>
+<h4>Programming &amp; Embedded</h4>
+</div>
 <div class="skill-tags">
 <span>C / C++</span>
 <span>Python</span>
-<span>Java</span>
-</div>
-
-</div>
-
-<div class="skill-group reveal">
-
-<div class="card-head">
-<i class="fas fa-toolbox"></i>
-<h4>Tools &amp; Workflow</h4>
-</div>
-
-<div class="skill-tags">
+<span>ESP32</span>
+<span>UART / SPI / I²C</span>
+<span>KiCad</span>
 <span>Git</span>
 <span>Linux</span>
-<span>HTML / CSS</span>
 </div>
-
 </div>
 
 </div>
@@ -298,7 +257,7 @@ Technical Skills
 
 </section>
 
-<!-- ================= PROJECT ================= -->
+<!-- ================= PROJECTS (rendered from data/projects.json by app.js) ================= -->
 
 <section id="projects">
 
@@ -306,128 +265,26 @@ Technical Skills
 
 <span class="eyebrow reveal">Selected work</span>
 
-<h2 class="section-title reveal">
+<h2 class="section-title reveal">Featured Projects</h2>
 
-Featured Projects
+<div class="project-filters" id="filters" role="group" aria-label="Filter projects"></div>
 
-</h2>
-
-<div class="project-grid">
-
-<div class="card reveal">
-
-<div class="card-head">
-<i class="fas fa-microchip"></i>
-<h3>3x3 Image Processing</h3>
-</div>
-
-<p>
-
-Real-time 2D Image Convolution Processor implemented on FPGA using Verilog HDL.
-
-</p>
-
-<div class="project-tags">
-<span>Verilog</span>
-<span>FPGA</span>
-<span>Image Processing</span>
-<span>Vivado</span>
-</div>
-
-<a href="https://github.com/Ygbzyem/FPGA_RealTime_Conv3x3_Processor" target="_blank">
-   View Project →
-</a>
-
-</div>
-
-<div class="card reveal">
-
-<div class="card-head">
-<i class="fas fa-microphone"></i>
-<h3>AI Speech to Text</h3>
-</div>
-
-<p>
-
-AI Keyword Spotting using ESP32 with Edge Impulse
-
-</p>
-
-<div class="project-tags">
-<span>ESP32</span>
-<span>Edge Impulse</span>
-<span>AI</span>
-<span>Embedded OS</span>
-
-</div>
-
-<a href="https://github.com/Ygbzyem/AI-Keyword-Spotting-With-ESP32" target="_blank">
-    View Project →
-</a>
-
-</div>
-
-<div class="card reveal">
-
-<div class="card-head">
-<i class="fas fa-pills"></i>
-<h3>AM Modulation</h3>
-</div>
-
-<p>
-
-Verilog AM modulator with dual NCOs and full vs quarter-wave sine ROM, bit-exact verified against a Python golden model.
-
-</p>
-
-<div class="project-tags">
-<span>Verilog</span>
-<span>FPGA</span>
-<span>ICDesign</span>
-<span>DigitalDesign</span>
-<span>Vivado</span>
-
-</div>
-
-<a href="#">
-    View Project →
-</a>
-
-</div>
-
-<div class="card reveal">
-
-<div class="card-head">
-<i class="fas fa-microphone"></i>
-<h3>TDM 4 Channel Multiplexing/Demultiplexing</h3>
-</div>
-
-<p>
-
-4-channel TDM mux/demux in Verilog for Kintex-7, verified with a self-checking testbench and a Python golden model.
-<div class="project-tags">
-<span>Verilog</span>
-<span>FPGA</span>
-<span>Digital Design</span>
-<span>Vivado</span>
-<span>TDM</span>
-<span>ICDesign</span>
-
-</div>
-
-<a href="https://github.com/Ygbzyem/TDM-4---Channel-Multiplerxer-Demultiplexer" target="_blank">
-    View Project →
-</a>
-
-</div>
-
+<div class="project-grid" id="projectGrid" aria-live="polite">
+<noscript><p>Project list needs JavaScript. All repositories are on <a href="https://github.com/Ygbzyem">GitHub</a>.</p></noscript>
 </div>
 
 </div>
 
 </section>
 
+</main>
+
+<!-- ================= PROJECT DETAIL (shown for #p/<slug>) ================= -->
+
+<main id="detail" class="container detail" hidden></main>
+
 <!-- ================= CONTACT ================= -->
+
 <footer id="contact">
 
 <div class="container">
@@ -440,47 +297,32 @@ Verilog AM modulator with dual NCOs and full vs quarter-wave sine ROM, bit-exact
 
     <div class="contact-grid reveal">
 
-        <!-- Left -->
         <div class="contact-info">
-
-            <p><i class="fas fa-envelope"></i> tungdepzai11032006@gmail.com</p>
-
-            <p><i class="fab fa-github"></i> github.com/Ygbzyem</p>
-
-            <p><i class="fas fa-phone"></i> +84 909877516</p>
-
+            <p><i class="fas fa-envelope"></i> <a href="mailto:tungdepzai11032006@gmail.com">tungdepzai11032006@gmail.com</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/Ygbzyem" target="_blank" rel="noopener">github.com/Ygbzyem</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+84909877516">+84 909 877 516</a></p>
         </div>
 
-        <!-- Divider -->
         <div class="vertical-line"></div>
 
-        <!-- Right -->
         <div class="footer-time">
-
-            <p id="current-date"></p>
-
-            <p id="vn-time"></p>
-
-            <p id="us-time"></p>
-
+            <p><i class="far fa-calendar"></i> <span id="current-date"></span></p>
+            <p><i class="fas fa-clock"></i> Vietnam <span id="vn-time"></span></p>
+            <p><i class="fas fa-clock"></i> New York <span id="us-time"></span></p>
         </div>
 
     </div>
 
     <div class="social-icons">
-
-        <a href="https://x.com/TngPhmMinh1"><i class="fab fa-x-twitter"></i></a>
-
-        <a href="https://www.instagram.com/ygbzyem/"><i class="fab fa-instagram"></i></a>
-
-        <a href="https://www.facebook.com/tung.phamminh.547727/"><i class="fab fa-facebook-f"></i></a>
-
-        <a href="https://www.linkedin.com/in/tung-pham-a33761420/"><i class="fab fa-linkedin-in"></i></a>
-
+        <a href="https://www.linkedin.com/in/tung-pham-a33761420/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Ygbzyem" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/TngPhmMinh1" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/ygbzyem/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/tung.phamminh.547727/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
     </div>
 
     <p class="copyright">
-        © 2026 Tung Pham | All Rights Reserved
+        © 2026 Tung Pham | All Rights Reserved<span id="lastUpdate"></span>
     </p>
 
     <div class="footer-line"></div>
@@ -489,28 +331,23 @@ Verilog AM modulator with dual NCOs and full vs quarter-wave sine ROM, bit-exact
 
 </footer>
 
+<div class="aurora" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
 <script src="script.js"></script>
-
-<div class="aurora">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
-<div class="particles">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-</div>
-
+<script src="app.js"></script>
 
 </body>
 

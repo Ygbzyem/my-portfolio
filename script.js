@@ -28,9 +28,9 @@ function updateClock() {
         hour12: false
     }).format(now);
 
-    document.getElementById("current-date").textContent = `📅 ${date}`;
-    document.getElementById("vn-time").textContent = `🇻🇳 Vietnam     ${vn}`;
-    document.getElementById("us-time").textContent = `🇺🇸 New York    ${us}`;
+    document.getElementById("current-date").textContent = date;
+    document.getElementById("vn-time").textContent = vn;
+    document.getElementById("us-time").textContent = us;
 }
 
 updateClock();
