@@ -127,6 +127,11 @@ if (discordId) {
         return appId ? `https://cdn.discordapp.com/app-assets/${appId}/${key}.png` : "";
     };
 
+    // Icons for apps Discord only detects (no app id in the activity)
+    const KNOWN_ICONS = {
+        "Visual Studio Code": "https://cdn.discordapp.com/app-icons/383226320970055681/db3133f34f68553148f3a65c1f4633aa.png?size=96",
+    };
+
     // Apps detected without Rich Presence images: fall back to the app's own icon (cached per app)
     const appIcons = {};
     const appIcon = async (appId) => {
@@ -168,8 +173,10 @@ if (discordId) {
             large = presence.spotify.album_art_url || "";
             label = "Spotify";
         } else {
-            // type 4 is the custom status text, not an app
-            const act = (presence.activities || []).find((a) => a.type !== 4);
+            // type 4 is the custom status text, not an app; prefer a Rich Presence
+            // activity (it has images/app id) over Discord's plain "detected app" entry
+            const apps = (presence.activities || []).filter((a) => a.type !== 4);
+            const act = apps.find((a) => a.assets || a.application_id) || apps[0];
             if (act) {
                 line = act.type === 0 ? `Using ${act.name}` : `${VERB[act.type] || ""} ${act.name}`.trim();
                 if (act.details) line += ` · ${act.details}`;
@@ -178,6 +185,7 @@ if (discordId) {
                 large = assetUrl(assets.large_image, act.application_id);
                 small = assetUrl(assets.small_image, act.application_id);
                 if (!large && act.application_id) large = await appIcon(act.application_id);
+                if (!large) large = KNOWN_ICONS[act.name] || "";
                 label = act.name;
             }
         }
