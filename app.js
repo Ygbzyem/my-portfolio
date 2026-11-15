@@ -108,7 +108,7 @@ async function loadRepoDates() {
   if (repoInfo["Ygbzyem/my-portfolio"]) $("#lastUpdate").textContent = ` · Last updated ${repoInfo["Ygbzyem/my-portfolio"]}`;
 }
 
-fetch("data/projects.json")
+fetch("data/projects.json", { cache: "no-cache" }) // always revalidate so edits show up
   .then((r) => r.json())
   .then((data) => {
     projects = data;
