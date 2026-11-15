@@ -1778,7 +1778,7 @@ section.hero{
     user-select:all;
 }
 
-.hero-portrait img{
+.hero-portrait > img{
     display:block;
     width:100%;
     aspect-ratio:4 / 5;
@@ -1790,16 +1790,19 @@ section.hero{
 
 .presence{
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     gap:12px;
+    width:100%;
     margin-top:14px;
-    font-size:14px;
+    font-size:13.5px;
     line-height:1.45;
 }
 
 .presence-text{
+    flex:1;
     min-width:0;
     display:grid;
+    gap:1px;
 }
 
 .presence-head{
@@ -1808,39 +1811,55 @@ section.hero{
     gap:8px;
 }
 
+.presence-head b{
+    color:var(--text);
+    font-weight:600;
+}
+
+/* one line each, cut with "…" instead of wrapping; full text is in the title tooltip */
+.presence-line{
+    color:var(--gray);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.presence-line:empty{
+    display:none;
+}
+
+.presence-app{
+    color:var(--text);
+}
+
+.presence-muted{
+    font-size:12.5px;
+}
+
 .presence-art{
     position:relative;
     flex:none;
-    width:44px;
-    height:44px;
+    width:40px;
+    height:40px;
+    margin-top:2px;
 }
 
 .presence-art #presenceIcon{
-    width:44px;
-    height:44px;
+    width:40px;
+    height:40px;
     border-radius:8px;
     object-fit:cover;
 }
 
 .presence-badge{
     position:absolute;
-    right:-5px;
-    bottom:-5px;
-    width:18px;
-    height:18px;
+    right:-4px;
+    bottom:-4px;
+    width:17px;
+    height:17px;
     border-radius:50%;
     border:2px solid var(--bg);
     background:var(--bg);
-}
-
-.presence-text b{
-    color:var(--text);
-    font-weight:600;
-}
-
-.presence-text span{
-    color:var(--gray);
-    overflow-wrap:anywhere;
 }
 
 /* status dot; colours follow Discord: online / idle / dnd / offline */

@@ -128,6 +128,9 @@ if (discordId) {
     };
 
     // Icons for apps Discord only detects (no app id in the activity)
+    // Friendlier names for apps that report a short one ("Code" is VS Code via VSCord)
+    const APP_NAMES = { "Code": "VS Code" };
+
     const KNOWN_ICONS = {
         "Visual Studio Code": "https://cdn.discordapp.com/app-icons/383226320970055681/db3133f34f68553148f3a65c1f4633aa.png?size=96",
     };
@@ -167,9 +170,11 @@ if (discordId) {
         presenceEl.dataset.status = status;
         document.getElementById("presenceStatus").textContent = STATUS[status] || "Offline";
 
-        let line = "", large = "", small = "", label = "";
+        let app = "", state = "", details = "", large = "", small = "", label = "";
         if (presence.listening_to_spotify && presence.spotify) {
-            line = `Listening to ${presence.spotify.song} by ${presence.spotify.artist}`;
+            app = "Listening to Spotify";
+            state = presence.spotify.song;
+            details = `by ${presence.spotify.artist}`;
             large = presence.spotify.album_art_url || "";
             label = "Spotify";
         } else {
@@ -178,19 +183,26 @@ if (discordId) {
             const apps = (presence.activities || []).filter((a) => a.type !== 4);
             const act = apps.find((a) => a.assets || a.application_id) || apps[0];
             if (act) {
-                line = act.type === 0 ? `Using ${act.name}` : `${VERB[act.type] || ""} ${act.name}`.trim();
-                if (act.details) line += ` · ${act.details}`;
-                if (act.timestamps && act.timestamps.start) line += ` · ${elapsed(act.timestamps.start)}`;
+                const name = APP_NAMES[act.name] || act.name;
+                app = act.type === 0 ? name : `${VERB[act.type] || ""} ${name}`.trim();
+                if (act.timestamps && act.timestamps.start) app += ` · ${elapsed(act.timestamps.start)}`;
+                // trim VSCord's default wording so the file / project name fits on one line
+                state = (act.state || "").replace(/^Working on /, "").replace(/:\d+:\d+$/, "");
+                details = (act.details || "").replace(/^In /, "").replace(/ - \d+ problems? found$/, "");
                 const assets = act.assets || {};
                 large = assetUrl(assets.large_image, act.application_id);
                 small = assetUrl(assets.small_image, act.application_id);
                 if (!large && act.application_id) large = await appIcon(act.application_id);
                 if (!large) large = KNOWN_ICONS[act.name] || "";
-                label = act.name;
+                label = name;
             }
         }
         // textContent, never innerHTML: these strings come from Discord
-        document.getElementById("presenceActivity").textContent = line;
+        for (const [id, text] of [["presenceApp", app], ["presenceState", state], ["presenceDetails", details]]) {
+            const el = document.getElementById(id);
+            el.textContent = text;
+            el.title = text;
+        }
         setArt(large, small, label);
         presenceEl.hidden = false;
     };

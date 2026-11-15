@@ -30,7 +30,7 @@
     <!-- apply the saved light/dark choice before first paint -->
     <script>try{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
 
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,7 +118,9 @@ Most of my projects compare two ways of building the same block and report what 
 </div>
 <div class="presence-text">
 <span class="presence-head"><span class="presence-dot" aria-hidden="true"></span><b id="presenceStatus">Online</b></span>
-<span id="presenceActivity"></span>
+<span class="presence-line presence-app" id="presenceApp"></span>
+<span class="presence-line" id="presenceState"></span>
+<span class="presence-line presence-muted" id="presenceDetails"></span>
 </div>
 </div>
 </aside>
@@ -345,7 +347,7 @@ tree against a systolic array, to see where area and timing actually go.
 
 </footer>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=8"></script>
 <script src="app.js?v=3"></script>
 
 </body>
