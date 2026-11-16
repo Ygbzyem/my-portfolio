@@ -70,7 +70,7 @@ function renderDetail(p) {
     <div class="detail-panel">${specs(p.specs)}
       <div class="card-links" style="margin-top:20px"><a class="back-link" href="https://github.com/${p.repo}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source code on GitHub ↗</a></div>
     </div>
-    <figure><img src="${RAW(p.repo, p.image)}" alt="${p.imageAlt}" loading="lazy"><figcaption>${p.imageAlt}</figcaption></figure>
+    ${p.image ? `<figure><img src="${RAW(p.repo, p.image)}" alt="${p.imageAlt || ""}" loading="lazy"><figcaption>${p.imageAlt || ""}</figcaption></figure>` : ""}
     <div class="prose">${p.body.map(block).join("")}</div>`;
   document.title = `${p.title} | Tung Pham`;
 }

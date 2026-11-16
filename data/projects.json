@@ -493,5 +493,116 @@
         ]
       ]
     ]
+  },
+  {
+    "slug": "line-robot",
+    "title": "Line-Following Robot with Obstacle Avoidance",
+    "icon": "fa-robot",
+    "year": 2026,
+    "repo": "Ygbzyem/Robot-Line-Follower-Obstacles-Detector",
+    "tags": [
+      "Embedded",
+      "Robotics"
+    ],
+    "stack": [
+      "C++",
+      "ESP32-S3",
+      "PlatformIO"
+    ],
+    "summary": "High-speed line follower on ESP32-S3 built for the F-Chip line-maze contest. It handles junctions, sharp corners and dashed lines, steers around a brick on the track and re-acquires the line.",
+    "specs": [
+      [
+        "MCU",
+        "ESP32-S3 (MakerEDU MKE-K01)"
+      ],
+      [
+        "Sensing",
+        "8-ch analog line sensor · VL53L0X · MPU6050"
+      ],
+      [
+        "Control",
+        "Per-wheel speed loop from N20 encoders"
+      ],
+      [
+        "Tuning",
+        "OLED menu, Serial or Wi-Fi page, saved in NVS"
+      ]
+    ],
+    "body": [
+      [
+        "p",
+        "The robot follows the line with an 8-channel analog sensor array that is calibrated per channel, compensated for sensor lag and protected against a stuck channel. Each wheel has its own speed loop from the quadrature encoders, and an MPU6050 gives the heading."
+      ],
+      [
+        "p",
+        "A front VL53L0X distance sensor detects a brick on the track. The robot drives around it and finds the line again. A DEMO run records the track map and a FAST run replays it."
+      ],
+      [
+        "h",
+        "Hardware"
+      ],
+      [
+        "p",
+        "ESP32-S3 (MakerEDU MKE-K01 + MKE-B01 shield), 2 × N20 encoder motors on a TB6612FNG driver, 8-channel analog line sensor, VL53L0X, MPU6050, SSD1306 OLED, 3 buttons, buzzer, 2S 18650 battery."
+      ],
+      [
+        "h",
+        "Track features handled"
+      ],
+      [
+        "list",
+        [
+          "Junctions and clusters on square and hexagon grids",
+          "90° corners, zigzags, dashed lines and arcs",
+          "Obstacle avoidance followed by line re-acquisition"
+        ]
+      ],
+      [
+        "h",
+        "Testing"
+      ],
+      [
+        "list",
+        [
+          "Bring-up sketches for every peripheral (power, buttons, OLED, motor driver, line sensor, drive-straight) and full-robot integration tests, run in the order of a written test plan.",
+          "A CI build compiles every sketch on each push.",
+          "Parameters can be exported as one line over Serial and pasted back to restore a tuning."
+        ]
+      ],
+      [
+        "h",
+        "Firmware versions"
+      ],
+      [
+        "table",
+        "",
+        [
+          "Version",
+          "Summary"
+        ],
+        [
+          [
+            "C3.9",
+            "Contest firmware running on the robot"
+          ],
+          [
+            "v3.9.1",
+            "Parallel version B"
+          ],
+          [
+            "v3.8",
+            "Version C with wrong-way guard"
+          ],
+          [
+            "v3.5.1",
+            "Wheel speed PID, flowing avoidance"
+          ],
+          [
+            "v3.1",
+            "DEMO / FAST map modes"
+          ]
+        ]
+      ]
+    ]
   }
 ]
