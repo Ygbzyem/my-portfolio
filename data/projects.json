@@ -496,7 +496,7 @@
   },
   {
     "slug": "line-robot",
-    "title": "Line-Following Robot with Obstacle Avoidance",
+    "title": "Line-Following Robot with Obstacle Avoidance (Processing)",
     "icon": "fa-robot",
     "year": 2026,
     "repo": "Ygbzyem/Robot-Line-Follower-Obstacles-Detector",
